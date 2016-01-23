@@ -43,11 +43,11 @@ class articuloController extends Controller
     public function store(Request $request)
     {
                 $articulo = new articulo;
-                
-                $articulo->'descripcion' = $request->desc;
-                $articulo->'cod_proveedor' = $request->proveedores;
-                $articulo->'stock' = $request->cant;
-                $articulo->'limite' = $request->lim;
+                $articulo->cod = $request->cod;
+                $articulo->$descripcion = $request->desc;
+                $articulo->$cod_proveedor = $request->proveedores;
+                $articulo->$stock = $request->cant;
+                $articulo->$limite = $request->lim;
                 $articulo->save();
 
                /* articulo::create(['cod'=>$request('cod'), 
