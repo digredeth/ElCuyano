@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: elcuyano
-        psr4_prefix: elcuyano
-        src_path: app
