@@ -17,6 +17,6 @@ Route::get('/', 'welcomeController@index');
 Route::get('/principal','principalController@index');
 
 /*RESTful Controllers*/
-Route::resource('/articulos','articuloController');
-Route::resource('/proveedores','proveedorsController');
+Route::resource('principal/articulos','articuloController');
+Route::resource('principal/proveedores','proveedorsController');
 
