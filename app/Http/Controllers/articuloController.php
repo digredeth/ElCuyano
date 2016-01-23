@@ -29,9 +29,7 @@ class articuloController extends Controller
      */
     public function create()
     {
-        $proveedores=DB::table('proveedors')
-                     ->orderBy('descripcion', 'asc')
-                     ->get();
+        $proveedores=proveedor::lists('descripcion','cod');
          
         return view('articulo.articuloCreate')->with("proveedores",$proveedores);
     }
@@ -44,10 +42,19 @@ class articuloController extends Controller
      */
     public function store(Request $request)
     {
-        /*articulo::create(*/
-      
-            dd($request->all());
-;
+        
+           articulo::create([
+
+               'cod'=>$request('cod'), 
+               'descripcion'=>$request('desc'),
+               'cod_proveedor'=>$request('proveedores'),
+               'stock'=>$request('cant'),
+               'limite'=>$request('lim'),
+               'created_at'=>$request('created_at'),
+               'updated_at'=>$request('updated_at')
+
+               ]);
+
        
         
     }

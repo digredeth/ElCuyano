@@ -15,12 +15,9 @@
 	</div>
 	<div class="form-group">
         <!--Proveedor Articulo (Select) -->
-        <label for="sel1" >Proveedor</label>
-        <select class="form-control"  id="sel1">
-        @foreach($proveedores as $proveedor)
-        <option>{{$proveedor->descripcion}}</option>
-        @endforeach
-        </select>
+        {!!Form::label('Proveedor:')!!}
+        {!!Form::select('proveedores', $proveedores,null,['class'=>'form-control'])!!}
+       
 	</div>
     <div class="form-group">
         <!--Stock Articulo -->
