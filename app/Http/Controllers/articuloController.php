@@ -43,21 +43,21 @@ class articuloController extends Controller
     public function store(Request $request)
     {
                 $articulo = new articulo;
-                $articulo->cod = $request->cod;
-                $articulo->$descripcion = $request->desc;
-                $articulo->$cod_proveedor = $request->proveedores;
-                $articulo->$stock = $request->cant;
-                $articulo->$limite = $request->lim;
+                $articulo->cod = $request('cod');
+                $articulo->$descripcion = $request('desc');
+                $articulo->$cod_proveedor = $request('proveedores');
+                $articulo->$stock = $request('cant');
+                $articulo->$limite = $request('lim');
                 $articulo->save();
 
-               /* articulo::create(['cod'=>$request('cod'), 
+               /*return articulo::create(['cod'=>$request('cod'), 
                'descripcion'=>$request('desc'),
                'cod_proveedor'=>$request('proveedores'),
                'stock'=>$request('cant'),
                'limite'=>$request('lim'),
                'created_at'=>$request('created_at'),
-               'updated_at'=>$request('updated_at')]);
-              */
+               'updated_at'=>$request('updated_at')]);*/
+              
        
         
     }
