@@ -3,7 +3,7 @@
 
 @section('content')
 <!-- Tabla Articulos -->
-<table id="tart" class="table table-striped table-hover ">
+<table id="tart" class="table table-striped table-hover" style="overflow:auto">
   <thead>
     <tr>
       <th>Codigo</th>

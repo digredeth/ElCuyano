@@ -9,6 +9,7 @@ use elcuyano\Http\Controllers\Controller;
 use elcuyano\articulo;
 use elcuyano\proveedor;
 
+
 class articuloController extends Controller
 {
     /**
@@ -42,13 +43,20 @@ class articuloController extends Controller
      */
     public function store(Request $request)
     {
-                $articulo = new articulo;
-                $articulo->cod = $request('cod');
-                $articulo->$descripcion = $request('desc');
-                $articulo->$cod_proveedor = $request('proveedores');
-                $articulo->$stock = $request('cant');
-                $articulo->$limite = $request('lim');
-                $articulo->save();
+              
+              
+           
+              $articulo = new articulo;
+              $articulo->cod = $request->cod;
+              $articulo->descripcion =(string)$request->descripcion;
+              $articulo->cod_proveedor = $request->cod_proveedor;
+              $articulo->stock = $request->stock;
+              $articulo->limite = $request->limite;
+
+           
+              $articulo->created_at=date("Y-m-d H:i:s");
+              $articulo->updated_at=date("Y-m-d H:i:s");
+              $articulo->save();
 
                /*return articulo::create(['cod'=>$request('cod'), 
                'descripcion'=>$request('desc'),
