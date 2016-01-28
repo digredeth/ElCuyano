@@ -1,6 +1,8 @@
 @extends('layouts.principalMaster')
 @section('title','Crear Articulo')
+
 @section('content')
+<br>
 
 	{!!Form::open(['action'=>'articuloController@store','method'=>'POST'])!!}
 	<div class="form-group">

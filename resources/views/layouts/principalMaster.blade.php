@@ -44,10 +44,10 @@
                     <a href="#">Stock</a>
                 </li>
                 <li>
-                    <a href="#">Gestion articulos</a>
+                    <a href={{ url('/principal/articulos') }}>Gestion articulos</a>
                 </li>
                 <li>
-                    <a href="#">Gestion proveedores</a>
+                    <a href={{ url('/principal/proveedores') }}>Gestion proveedores</a>
                 </li>
                 <li>
                     <a href="#">Historial</a>

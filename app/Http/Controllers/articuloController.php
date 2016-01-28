@@ -52,19 +52,9 @@ class articuloController extends Controller
               $articulo->cod_proveedor = $request->cod_proveedor;
               $articulo->stock = $request->stock;
               $articulo->limite = $request->limite;
-
-           
-              $articulo->created_at=date("Y-m-d H:i:s");
-              $articulo->updated_at=date("Y-m-d H:i:s");
               $articulo->save();
 
-               /*return articulo::create(['cod'=>$request('cod'), 
-               'descripcion'=>$request('desc'),
-               'cod_proveedor'=>$request('proveedores'),
-               'stock'=>$request('cant'),
-               'limite'=>$request('lim'),
-               'created_at'=>$request('created_at'),
-               'updated_at'=>$request('updated_at')]);*/
+            
               
        
         

@@ -3,7 +3,7 @@
 
 @section('content')
 <!-- Tabla Articulos -->
-<table id="tart" class="table table-striped table-hover" style="overflow:auto">
+<table id="tart" class="table table-striped table-hover">
   <thead>
     <tr>
       <th>Codigo</th>
@@ -25,5 +25,11 @@
   </tbody>
     @endforeach
 </table>
+
+@section('footer')
+<div>HOlaaaaaaaaaaaaa</div>
 @endsection
+@endsection
+
+
 

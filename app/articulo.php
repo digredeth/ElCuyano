@@ -10,9 +10,9 @@ class articulo extends Model
 
     protected $primaryKey="cod";
 
-    protected $dateFormat = 'U';
+    /*protected $timestamps=true;*/
  
-    protected $fillable = ['cod', 'descripcion','cod_proveedor','stock','limite','created_at','updated_at'];
+    protected $fillable = ['cod', 'descripcion','cod_proveedor','stock','limite'];
  
 
 }
