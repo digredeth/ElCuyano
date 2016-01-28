@@ -40,7 +40,11 @@ class proveedorsController extends Controller
      */
     public function store(Request $request)
     {
-       var_dump($request->all());
+           
+              $proveedor = new proveedor;
+              $proveedor->cod = $request->cod;
+              $proveedor->descripcion=(string)$request->descripcion;
+              $proveedor->save();
     }
 
     /**

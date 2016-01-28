@@ -4,6 +4,7 @@
 
 @section('content')
 <!-- Tabla Proveedores -->
+<div style="height:300px;overflow-y:scroll;">
 <table id="tart" class="table table-striped table-hover ">
   <thead>
     <tr>
@@ -20,4 +21,5 @@
   </tbody>
     @endforeach
 </table>
+</div>
 @endsection

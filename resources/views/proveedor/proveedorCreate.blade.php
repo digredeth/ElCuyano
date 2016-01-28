@@ -10,7 +10,7 @@
 </div>
 <div class="form-group">
     {!!Form::label('Descripcion:')!!}
-    {!!Form::text('desc',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre del proveedor'])!!}
+    {!!Form::text('descripcion',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre del proveedor'])!!}
 </div>
 {!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
 {!!Form::close()!!}

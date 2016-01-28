@@ -1,6 +1,5 @@
 @extends('layouts.principalMaster')
 @section('title','Crear Articulo')
-
 @section('content')
 <br>
 

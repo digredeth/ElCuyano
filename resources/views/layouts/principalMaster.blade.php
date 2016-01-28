@@ -41,10 +41,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Stock</a>
+                    <a href={{ url('/principal/articulos') }}>Stock</a>
                 </li>
                 <li>
-                    <a href={{ url('/principal/articulos') }}>Gestion articulos</a>
+                    <a href="#">Gestion articulos</a>
                 </li>
                 <li>
                     <a href={{ url('/principal/proveedores') }}>Gestion proveedores</a>
@@ -68,14 +68,15 @@
                     <div class="col-lg-12" >
                         
             <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="float: right;">Ocultar Menu</a>
-                 @yield('content')       
+                 @yield('content') 
+
+
 
                     </div>
                 </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-
     </div>
     <!-- /#wrapper -->
 

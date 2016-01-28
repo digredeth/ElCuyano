@@ -43,9 +43,6 @@ class articuloController extends Controller
      */
     public function store(Request $request)
     {
-              
-              
-           
               $articulo = new articulo;
               $articulo->cod = $request->cod;
               $articulo->descripcion =(string)$request->descripcion;
