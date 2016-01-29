@@ -52,10 +52,7 @@ class articuloController extends Controller
               $articulo->save();
 
             
-              
-       
-        
-    }
+     }
 
     /**
      * Display the specified resource.

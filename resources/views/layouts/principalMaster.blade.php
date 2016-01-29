@@ -29,14 +29,13 @@
 </head>
 
 <body>
-
     <div id="wrapper">
        @section('sidebar')
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
+                    <a href={{ url('/principal/') }}>
                         El Cuyano S.R.L
                     </a>
                 </li>
