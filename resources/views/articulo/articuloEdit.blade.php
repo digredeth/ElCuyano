@@ -1,7 +1,7 @@
 @extends('layouts.principalMaster')
 @section('title','Editar Articulo')
 @section('content')
-{!!Form::model($articulo, array('action' => array('articuloController@update', $articulo->cod)))!!}
+{!!Form::model($articulo, ['action' => ['articuloController@update', $articulo->cod],'method'=>'PUT'])!!}
 	 @include('layouts.artform')
     <!-- Boton de Submit -->
 	{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}

@@ -4,6 +4,7 @@ namespace elcuyano\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Redirect;
 use elcuyano\Http\Requests;
 use elcuyano\Http\Controllers\Controller;
 use elcuyano\articulo;
@@ -87,7 +88,15 @@ class articuloController extends Controller
      */
     public function update(Request $request, $id)
     {
-         //
+          $articulo=articulo::find($id);
+          $articulo->cod = $request->cod;
+          $articulo->descripcion =(string)$request->descripcion;
+          $articulo->cod_proveedor = $request->cod_proveedor;
+          $articulo->stock = $request->stock;
+          $articulo->limite = $request->limite;
+          $articulo->save();
+
+          return Redirect::to('/principal/articulos');
     }
 
     /**
