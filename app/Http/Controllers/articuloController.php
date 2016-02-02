@@ -71,9 +71,11 @@ class articuloController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($cod)
     {
-        //
+        $articulo=articulo::find($cod);
+        $proveedores=proveedor::lists('descripcion','cod');
+        return view('articulo.articuloEdit')->with("articulo",$articulo)->with("proveedores",$proveedores);
     }
 
     /**
@@ -85,7 +87,7 @@ class articuloController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         //
     }
 
     /**
