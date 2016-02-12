@@ -10,6 +10,7 @@
     <tr>
       <th>Codigo</th>
       <th>Descripcion</th>
+      <th>Operacion</th>
     </tr>
   </thead>
     @foreach($proveedores as $proveedor)
@@ -17,6 +18,10 @@
     <tr>
       <td>{{$proveedor->cod}}</td>
       <td>{{$proveedor->descripcion}}</td>
+      <td>
+          {!!link_to_action('proveedorsController@edit',$title='Editar',$parameters=$proveedor->cod,$attributes=['class'=>'btn btn-primary'])!!}
+          {!!link_to_action('proveedorsController@destroy',$title='Borrar',$parameters=$proveedor->cod,$attributes=['class'=>'btn btn-danger'])!!}
+        </td>
     </tr>
   </tbody>
     @endforeach

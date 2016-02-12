@@ -24,6 +24,12 @@ class articuloController extends Controller
         return view('principalArticulos')->with("articulos",$articulos);
     }
 
+    /*Retorno la vista sin edicion de los articulos*/
+    public function stock(){
+      $articulos=articulo::All();  
+      return view('principalStock')->with("articulos",$articulos);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

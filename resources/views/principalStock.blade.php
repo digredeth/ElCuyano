@@ -1,5 +1,5 @@
 @extends('layouts.principalMaster')
-@section('title','Gestion Articulos')
+@section('title','Stock')
 
 @section('content')
 <!--Buscador-->
@@ -14,29 +14,33 @@
         <th>Proveedor</th>
         <th>Stock</th>
         <th>Limite</th>
-        <th>Operacion</th>
       </tr>
     </thead>
     @foreach($articulos as $articulo)
     <tbody>
-      <tr id="row-data">
+      <tr class="row-data">
         <td>{{$articulo->cod}}</td>
         <td>{{$articulo->descripcion}}</td>
         <td>{{$articulo->cod_proveedor}}</td>
-        <td>{{$articulo->stock}}</td>
-        <td>{{$articulo->limite}}</td>
-        <td>
-        {!!link_to_action('articuloController@edit',$title='Editar',$parameters=$articulo->cod,$attributes=['class'=>'btn btn-primary'])!!}
-          {!!link_to_action('articuloController@destroy',$title='Borrar',$parameters=$articulo->cod,$attributes=['class'=>'btn btn-danger'])!!}
-        </td>
+        <td class="stock">{{$articulo->stock}}</td>
+        <td class="limite">{{$articulo->limite}}</td>
       </tr>
     </tbody>
     @endforeach
   </table>
 </div>
 
+
 @endsection
 
+<!--JQUERY-->
+{!!Html::script('js/jquery.js')!!}
+
+<!--Aca Script para poner en danger la columna-->
+{!!Html::script('js/scriptdigre/alertaLimite.js')!!}
+
+<script type="text/javascript">
+  
 
 
-
+</script>

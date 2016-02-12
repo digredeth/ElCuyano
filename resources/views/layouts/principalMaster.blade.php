@@ -29,38 +29,25 @@
 </head>
 
 <body>
-
-
-
-    <div id="wrapper">
+   <div id="wrapper">
        @section('sidebar')
-
-
-        <!-- Sidebar -->
-       
-
-
-
-
-
-        <div id="sidebar-wrapper">
+         <!-- Sidebar -->
+         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href={{ url('/principal') }}>
-                         El Cuyano S.R.L 
-                    </a>
+                <li class="sidebar-brand container">
+                    <a href={{ url('/principal') }}>El Cuyano S.R.L</a>
                 </li>
                 <li>
-                    <a href={{ url('/principal/articulos') }}>Stock</a>
+                    <a href={{ url('/principal/stock') }}>Stock</a>
                 </li>
                 <li>
-                    <a href="#">Gestion articulos</a>
+                    <a href={{ url('/principal/articulos') }}>Gestion articulos</a>
                 </li>
                 <li>
                     <a href={{ url('/principal/proveedores') }}>Gestion proveedores</a>
                 </li>
                 <li>
-                    <a href="#">Historial</a>
+                    <a href="#">Movimientos</a>
                 </li>
                 <li>
                     <a href="#">Informes</a>
@@ -72,42 +59,10 @@
         @show
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
+        <div id="page-content-wrapper" style="float:left">
             <div class="container-fluid">
                 <div class="row">
-                 {{-- <div class="col-lg-6">
-                   <div class="input-group">
-                     <input type="text" class="form-control" placeholder="Search for...">
-                     <span class="input-group-btn">
-                       <button class="btn btn-default" type="button">Go!</button>
-                     </span>
-                   </div><!-- /input-group -->
-                                </div><!-- /.col-lg-6 --> --}}
                     <div class="col-lg-12" >
-    <div class="container" >
-    <div class="row row-lefted" >    
-        <div class="col-xs-8 col-xs-offset-2">
-            <div class="input-group" >
-                <div class="input-group-btn search-panel">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <span id="search_concept">Filter by</span> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#contains">Descripcion</a></li>
-                      <li><a href="#its_equal">Codigo</a></li>
-                      <li><a href="#greather_than">Proveedor</a></li>
-                      <li><a href="#less_than">Cantidad </a></li>
-                    </ul>
-                </div>
-                <input type="hidden" name="search_param" value="all" id="search_param">         
-                <input type="text" class="form-control" name="x" placeholder="Search term...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
             <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="float: right;">=</a>
                  @yield('content') 
 
@@ -121,33 +76,21 @@
     </div>
     <!-- /#wrapper -->
 
+
+
     <!-- jQuery -->
-    
     {!!Html::script('js/jquery.js')!!}
-    <!-- <script src="js/jquery.js"></script> -->
+    
 
     <!-- Bootstrap Core JavaScript -->
-    
     {!!Html::script('js/bootstrap.min.js')!!}
-    <!-- <script src="js/bootstrap.min.js"></script> -->
+    
     
     <!-- Menu Toggle Script -->
-    
     {!!Html::script('js/scriptdigre/principalToogle.js')!!}
-    <!-- <script src="js/scriptdigre/principalToogle.js"></script> -->
     
     <!--Dropdown list change Script -->
-    <script type="text/javascript">
-    $(document).ready(function(e){
-    $('.search-panel .dropdown-menu').find('a').click(function(e) {
-        e.preventDefault();
-        var param = $(this).attr("href").replace("#","");
-        var concept = $(this).text();
-        $('.search-panel span#search_concept').text(concept);
-        $('.input-group #search_param').val(param);
-    });
-});
- </script>
+    {!!Html::script('js/scriptdigre/ddownChange.js')!!}
 
 </body>
 
