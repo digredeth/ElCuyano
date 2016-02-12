@@ -2,8 +2,7 @@
 @section('title','Gestion Articulos')
 
 @section('content')
-<!--Buscador-->
-@include('layouts.buscador')
+
 <!-- Tabla Articulos -->
 <div style="height:500px;overflow-y:scroll;">
   <table id="tart" class="table table-striped table-hover " >

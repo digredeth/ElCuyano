@@ -27,71 +27,96 @@
     <![endif]-->
 
 </head>
-
 <body>
-   <div id="wrapper">
-       @section('sidebar')
-         <!-- Sidebar -->
-         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand container">
-                    <a href={{ url('/principal') }}>El Cuyano S.R.L</a>
-                </li>
-                <li>
-                    <a href={{ url('/principal/stock') }}>Stock</a>
-                </li>
-                <li>
-                    <a href={{ url('/principal/articulos') }}>Gestion articulos</a>
-                </li>
-                <li>
-                    <a href={{ url('/principal/proveedores') }}>Gestion proveedores</a>
-                </li>
-                <li>
-                    <a href="#">Movimientos</a>
-                </li>
-                <li>
-                    <a href="#">Informes</a>
-                </li>
-                
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        @show
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper" style="float:left">
+<div id="wrapper">
+    @section('sidebar')
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand container">
+                <a href={{ url('/principal') }}>El Cuyano S.R.L</a>
+            </li>
+            <li>
+                <a href={{ url('/principal/stock') }}>Stock</a>
+            </li>
+            <li>
+                <a href={{ url('/principal/articulos') }}>Gestion articulos</a>
+            </li>
+            <li>
+                <a href={{ url('/principal/proveedores') }}>Gestion proveedores</a>
+            </li>
+            <li>
+                <a href="#">Movimientos</a>
+            </li>
+            <li>
+                <a href="#">Informes</a>
+            </li>
+            
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    @show
+    <!-- Page Content -->
+    <div id="page-content-wrapper" style="float:left">
+        <!--UpBar-->
+        <nav class="navbar navbar-default" >
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12" >
-            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="float: right;">=</a>
-                 @yield('content') 
-
-
-
-                    </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Buscar por<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Codigo</a></li>
+                                <li><a href="#">Descripcion</a></li>
+                                <li><a href="#">Proveedor</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#menu-toggle" class="btn btn-primary" id="menu-toggle" style="float: right;">=</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--End UpBar-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12" >
+                    
+                    @yield('content')
                 </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+<!-- jQuery -->
+{!!Html::script('js/jquery.js')!!}
+
+<!-- Bootstrap Core JavaScript -->
+{!!Html::script('js/bootstrap.min.js')!!}
 
 
+<!-- Menu Toggle Script -->
+{!!Html::script('js/scriptdigre/principalToogle.js')!!}
 
-    <!-- jQuery -->
-    {!!Html::script('js/jquery.js')!!}
-    
-
-    <!-- Bootstrap Core JavaScript -->
-    {!!Html::script('js/bootstrap.min.js')!!}
-    
-    
-    <!-- Menu Toggle Script -->
-    {!!Html::script('js/scriptdigre/principalToogle.js')!!}
-    
-    <!--Dropdown list change Script -->
-    {!!Html::script('js/scriptdigre/ddownChange.js')!!}
-
+<!--Dropdown list change Script -->
+{!!Html::script('js/scriptdigre/ddownChange.js')!!}
 </body>
-
 </html>
