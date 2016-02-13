@@ -26,8 +26,8 @@
 				<tbody>
 					<tr id="row-data">
 						<td>{{$articulo->cod}}</td>
-						<td>{{$articulo->descripcion}}</td>
-						<td>{{$articulo->cod_proveedor}}</td>
+						<td>{{$articulo->artdesc}}</td>
+						<td>{{$articulo->provdesc}}</td>
 						<td>{{$articulo->stock}}</td>
 						<td>{{$articulo->limite}}</td>
 					</tr>

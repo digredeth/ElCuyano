@@ -20,13 +20,22 @@ class articuloController extends Controller
      */
     public function index()
     {
-        $articulos=articulo::All();
+        
+        $articulos = DB::table('articulos')
+            ->join('proveedors', 'articulos.cod_proveedor', '=', 'proveedors.cod')
+            ->select('articulos.cod', 'articulos.descripcion as artdesc', 'proveedors.descripcion as provdesc','articulos.stock','articulos.limite')
+            ->orderBy('artdesc', 'asc')->get();
         return view('principalArticulos')->with("articulos",$articulos);
     }
 
     /*Retorno la vista sin edicion de los articulos*/
     public function stock(){
-      $articulos=articulo::All();  
+
+            $articulos = DB::table('articulos')
+            ->join('proveedors', 'articulos.cod_proveedor', '=', 'proveedors.cod')
+            ->select('articulos.cod', 'articulos.descripcion as artdesc', 'proveedors.descripcion as provdesc','articulos.stock','articulos.limite')
+            ->orderBy('artdesc', 'asc')->get();
+     
       return view('principalStock')->with("articulos",$articulos);
     }
 

@@ -17,6 +17,8 @@
 
     <!-- Custom CSS -->
     {!!Html::style('css/simple-sidebar.css')!!}
+
+     {!!Html::style('css/header-fixed.css')!!}
     <!-- <link href="css/simple-sidebar.css" rel="stylesheet">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,7 +48,7 @@
                 <a href={{ url('/principal/proveedores') }}>Gestion proveedores</a>
             </li>
             <li>
-                <a href="#">Movimientos</a>
+                <a href={{ url('/principal/movimientos') }}>Movimientos</a>
             </li>
             <li>
                 <a href="#">Informes</a>
@@ -85,7 +87,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">Buscar</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#menu-toggle" class="btn btn-primary" id="menu-toggle" style="float: right;">=</a></li>

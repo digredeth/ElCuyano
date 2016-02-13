@@ -3,6 +3,7 @@
 
 @section('content')
 
+
 <!-- Tabla Articulos -->
 <div style="height:500px;overflow-y:scroll;">
   <table id="tart" class="table table-striped table-hover " >
@@ -19,8 +20,8 @@
     <tbody>
       <tr class="row-data">
         <td>{{$articulo->cod}}</td>
-        <td>{{$articulo->descripcion}}</td>
-        <td>{{$articulo->cod_proveedor}}</td>
+        <td>{{$articulo->artdesc}}</td>
+        <td>{{$articulo->provdesc}}</td>
         <td class="stock">{{$articulo->stock}}</td>
         <td class="limite">{{$articulo->limite}}</td>
       </tr>

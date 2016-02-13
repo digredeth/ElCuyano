@@ -19,8 +19,8 @@ class principalController extends Controller
      */
     public function index()
     {
-       $articulos=articulo::All();
-       return view('principalMovimientos')->with("articulos",$articulos);;
+       
+       return view('principalHome');
     }
     
    

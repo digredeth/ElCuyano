@@ -20,4 +20,5 @@ Route::get('/principal/stock','articuloController@stock');
 /*RESTful Controllers*/
 Route::resource('principal/articulos','articuloController');
 Route::resource('principal/proveedores','proveedorsController');
+Route::resource('principal/movimientos','movimientoController');
 
