@@ -26,7 +26,7 @@
         <td>{{$articulo->limite}}</td>
         <td>
         {!!link_to_action('articuloController@edit',$title='Editar',$parameters=$articulo->cod,$attributes=['class'=>'btn btn-primary'])!!}
-          {!!link_to_action('articuloController@destroy',$title='Borrar',$parameters=$articulo->cod,$attributes=['class'=>'btn btn-danger'])!!}
+        {!!link_to_action('articuloController@destroy',$title='Eliminar',$parameters=$articulo->cod,$attributes=['class'=>'btn btn-danger'])!!}
         </td>
       </tr>
     </tbody>

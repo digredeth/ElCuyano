@@ -67,6 +67,8 @@ class articuloController extends Controller
               $articulo->limite = $request->limite;
               $articulo->save();
 
+              return Redirect::to('/principal/articulos/create');
+
             
      }
 
@@ -110,7 +112,7 @@ class articuloController extends Controller
           $articulo->stock = $request->stock;
           $articulo->limite = $request->limite;
           $articulo->save();
-
+          
           return Redirect::to('/principal/articulos');
     }
 
@@ -122,6 +124,7 @@ class articuloController extends Controller
      */
     public function destroy($id)
     {
-        //
+       
+        return $id;
     }
 }

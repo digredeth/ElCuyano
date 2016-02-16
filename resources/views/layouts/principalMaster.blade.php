@@ -18,7 +18,6 @@
     <!-- Custom CSS -->
     {!!Html::style('css/simple-sidebar.css')!!}
 
-     {!!Html::style('css/header-fixed.css')!!}
     <!-- <link href="css/simple-sidebar.css" rel="stylesheet">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

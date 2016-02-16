@@ -13,7 +13,12 @@ class CreateMovimientosTable extends Migration
     public function up()
     {
         Schema::create('movimientos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('cod');
+            $table->integer('tipo');
+            $table->dateTime('commited_at');
+            $table->integer('cod_usuario')->unsigned()->nullable();
+            $table->foreign('cod_usuario')->references('id')
+                  ->on('users');
             $table->timestamps();
         });
     }

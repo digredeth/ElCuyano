@@ -2,7 +2,7 @@
 <div class="form-group">
         <!--Codigo articulo -->
 		{!!Form::label('Codigo:')!!}
-		{!!Form::number('cod',null,['class'=>'form-control','placeholder'=>'Ingresa el Codigo del articulo'])!!}
+		{!!Form::text('cod',null,['class'=>'form-control','placeholder'=>'Ingresa el Codigo del articulo'])!!}
 	</div>
 	<div class="form-group">
         <!--Nombre Articulo -->

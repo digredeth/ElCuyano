@@ -3,7 +3,7 @@
 namespace elcuyano\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Redirect;
 use elcuyano\Http\Requests;
 use elcuyano\Http\Controllers\Controller;
 use elcuyano\proveedor;
@@ -45,6 +45,8 @@ class proveedorsController extends Controller
               $proveedor->cod = $request->cod;
               $proveedor->descripcion=(string)$request->descripcion;
               $proveedor->save();
+
+              return Redirect::to('/principal/proveedores/create');
     }
 
     /**

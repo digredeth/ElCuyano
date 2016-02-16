@@ -13,7 +13,7 @@ class CreateArticulosTable extends Migration
     public function up()
     {
         Schema::create('articulos', function (Blueprint $table) {
-            $table->integer('cod')->unsigned()->primary();
+            $table->string('cod')->primary();
             $table->string('descripcion');
             $table->integer('stock');
             $table->integer('limite');
