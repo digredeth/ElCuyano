@@ -12,7 +12,7 @@
         	</div>
         	<div class="panel-body">
         		<div style="height:600px;overflow-y:scroll;">
-			<table id="tart" class="table table-striped table-condensed " >
+			<table id="tart" class="table table-bordered" >
 				<thead >
 					<tr>
 						<th>Codigo</th>
@@ -24,9 +24,9 @@
 				</thead>
 				@foreach($articulos as $articulo)
 				<tbody>
-					<tr id="row-data">
-						<td>{{$articulo->cod}}</td>
-						<td>{{$articulo->artdesc}}</td>
+					<tr class="row-data">
+						<td id="codigo">{{$articulo->cod}}</td>
+						<td class="descripcion">{{$articulo->artdesc}}</td>
 						<td>{{$articulo->provdesc}}</td>
 						<td>{{$articulo->stock}}</td>
 						<td>{{$articulo->limite}}</td>
@@ -67,3 +67,8 @@
 	</div>
 </div>
 	@endsection
+
+{!!Html::script('js/jquery.js')!!}
+
+{!!Html::script('js/scriptdigre/selectDdclick.js')!!}
+

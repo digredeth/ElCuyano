@@ -107,6 +107,7 @@
     <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
+
 <!-- jQuery -->
 {!!Html::script('js/jquery.js')!!}
 
