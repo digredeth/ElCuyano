@@ -41,7 +41,28 @@ class movimientoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*Falta completar con los datos del request*/
+       $movimiento= new movimiento;
+       $movimiento->tipo = $request->cod;
+       $movimiento->cod_usuario =(string)$request->descripcion;
+       $movimiento->save();
+       /*$cod_mov=Aca obtenemos el codigo del movimiento recien creado*/
+
+       /*
+        Aca creamos las filas de la tabla movarts con el id del movimiento creado
+        y los codigos de los articulos y cantidades.
+        seria algo como
+
+        For i=1, cantItems
+        $movart=new movart;
+        $movart->cod_mov=$cod_mov;
+        $movart->cod_art=$request->art[i];
+        $movart->cant=$request->cant[i];
+        $movart->save();
+        end for
+
+
+       */
     }
 
     /**

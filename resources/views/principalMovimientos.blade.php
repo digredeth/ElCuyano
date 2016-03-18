@@ -54,6 +54,8 @@
 		
 	</div>
 </div>
+<div class="container"><div class="col-md-6"></div><div class="btn btn-danger col-md-3" float="right">Cancelar</div><div class="btn btn-primary col-md-3" float="right">Guardar</div></div>
+
 @endsection
 {!!Html::script('js/jquery.js')!!}
 {!!Html::script('js/scriptdigre/selectDdclick.js')!!}
