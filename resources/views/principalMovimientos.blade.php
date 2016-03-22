@@ -54,7 +54,9 @@
 		
 	</div>
 </div>
-<div class="container"><div class="col-md-6"></div><div class="btn btn-danger col-md-3" float="right">Cancelar</div><div class="btn btn-primary col-md-3" float="right">Guardar</div></div>
+<div>
+	{!!link_to_action('movimientoController@store',$title='Guardar',$parameters=null,$attributes=['class'=>'btn btn-primary col-md-3','style'=>'float:right'])!!}
+</div>
 
 @endsection
 {!!Html::script('js/jquery.js')!!}

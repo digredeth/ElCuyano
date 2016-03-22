@@ -30,7 +30,7 @@ class articuloController extends Controller
 
     /*Retorno la vista sin edicion de los articulos*/
     public function stock(){
-
+       
             $articulos = DB::table('articulos')
             ->join('proveedors', 'articulos.cod_proveedor', '=', 'proveedors.cod')
             ->select('articulos.cod', 'articulos.descripcion as artdesc', 'proveedors.descripcion as provdesc','articulos.stock','articulos.limite')

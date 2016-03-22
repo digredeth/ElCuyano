@@ -57,67 +57,72 @@
     </div>
     <!-- /#sidebar-wrapper -->
     @show
-    <!-- Page Content -->
-    <div id="page-content-wrapper" style="float:left">
-        <!--UpBar-->
-        <nav class="navbar navbar-default" >
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Buscar por<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Codigo</a></li>
-                                <li><a href="#">Descripcion</a></li>
-                                <li><a href="#">Proveedor</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Buscar</button>
-                    </form>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#menu-toggle" class="btn btn-primary" id="menu-toggle" style="float: right;">=</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!--End UpBar-->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12" >
-                    
-                    @yield('content')
-                </div>
-            </div>
-        </div>
+<!-- Page Content -->
+<div id="page-content-wrapper" style="float:left">
+    <!--UpBar-->
+    <nav class="navbar navbar-default" >
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        
     </div>
-    <!-- /#page-content-wrapper -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Buscar por<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Codigo</a></li>
+                    <li><a href="#">Descripcion</a></li>
+                    <li><a href="#">Proveedor</a></li>
+                </ul>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Buscar</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuario <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Facundo</a></li>
+                    <li><a href="#">Hugo</a></li>
+                    <li><a href="#">Vicente</a></li>
+                    <li><a href="#">Guillermo</a></li>
+                    <li><a href="#">Oscar</a></li>
+                </ul>
+            </li></li>
+            <li><a href="#menu-toggle" class="btn btn-primary" id="menu-toggle" style="float: right;">=</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+<!--End UpBar-->
+<div class="container-fluid">
+<div class="row">
+    <div class="col-lg-12" >
+        
+        @yield('content')
+    </div>
+</div>
+</div>
+</div>
+<!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
-
 <!-- jQuery -->
 {!!Html::script('js/jquery.js')!!}
-
 <!-- Bootstrap Core JavaScript -->
 {!!Html::script('js/bootstrap.min.js')!!}
-
-
 <!-- Menu Toggle Script -->
 {!!Html::script('js/scriptdigre/principalToogle.js')!!}
-
 <!--Dropdown list change Script -->
 {!!Html::script('js/scriptdigre/ddownChange.js')!!}
 </body>
